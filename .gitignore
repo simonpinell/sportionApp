@@ -11,7 +11,6 @@ log.txt
 *.sublime-workspace
 .vscode/
 npm-debug.log*
-
 .idea/
 .ionic/
 .sourcemaps/
@@ -30,6 +29,7 @@ plugins/ios.json
 $RECYCLE.BIN/
 /environments/
 environments
+environments/
 
 .DS_Store
 Thumbs.db
