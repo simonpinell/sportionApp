@@ -5,7 +5,8 @@ const routes: Routes = [
   { 
     path: '', 
     loadChildren: './pages/tabs/tabs.module#TabsPageModule' 
-  }
+  },
+  { path: 'tutorial', loadChildren: './tutorial/tutorial.module#TutorialPageModule' }
   
 ];
 @NgModule({
