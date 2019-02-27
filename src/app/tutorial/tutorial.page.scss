@@ -1,0 +1,24 @@
+ion-toolbar {
+  // TODO test transparent and fullscreen
+  --background: transparent;
+  --border-color: transparent;
+}
+
+.swiper-slide {
+  display: block;
+}
+
+.slide-title {
+  margin-top: 2.8rem;
+}
+
+.slide-image {
+  max-height: 60%;
+  max-width: 60%;
+  margin: 40px 0;
+}
+
+p {
+  padding: 0 35px;
+  line-height: 1.5;
+}

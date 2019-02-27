@@ -1,0 +1,660 @@
+{
+  "exercises" : {
+    "Bankdrücken Langhantel" : {
+      "area" : "Brust",
+      "fxf" : 50,
+      "hatfield" : 65,
+      "name" : "Bankdrücken Langhantel",
+      "weight" : 65
+    },
+    "Bankdrücken eng" : {
+      "area" : "Brust, Trizeps",
+      "fxf" : 40,
+      "hatfield" : 30,
+      "name" : "Bankdrücken eng",
+      "weight" : 55
+    },
+    "Bankdrücken freihändig pro Seite" : {
+      "area": "Brust",
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Bankdrücken freihändig pro Seite",
+      "weight" : 32
+    },
+    "Bankdrücken negativ breit" : {
+      "area": "Brust",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Bankdrücken negativ",
+      "weight" : 50
+    },
+    "Bankdrücken negativ eng" : {
+      "area": "Brust",
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Bankdrücken negativ eng",
+      "weight" : 40
+    },
+    "Bankdrücken negativ freihändig pro Seite" : {
+      "area": "Brust",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Bankdrücken negativ freihändig pro Seite",
+      "weight" : 26
+    },
+    "Bankdrücken schräg 45°" : {
+      "fxf" : 0,
+      "hatfield" : 60,
+      "name" : "Bankdrücken schräg 45°",
+      "weight" : 60
+    },
+    "Bankdrücken schräg freihändig pro Seite" : {
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Bankdrücken schräg freihändig pro Seite",
+      "weight" : 30
+    },
+    "Butterfly" : {
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Butterfly",
+      "weight" : 0
+    },
+    "Butterfly Kabelzug vorgebeugt" : {
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Butterfly Kabelzug vorgebeugt",
+      "weight" : 0
+    },
+    "Crunches" : {
+      "area": "Bauch",
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Crunches",
+      "weight" : 0
+    },
+    "Face Pull hoch stehend Kabel" : {
+      "area" : "Bizeps",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Face Pull hoch stehend Kabel",
+      "weight" : 30
+    },
+    "Fliegende Kabelzug" : {
+      "area": "Brust",
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Fliegende Kabelzug",
+      "weight" : 0
+    },
+    "Fliegende freihändig" : {
+      "area": "Brust",
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Fliegende freihändig",
+      "weight" : 20
+    },
+    "Fliegende freihändig negativ" : {
+      "area": "Brust",
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Fliegende negativ",
+      "weight" : 0
+    },
+    "Fliegende schräg 45°" : {
+      "area": "Brust",
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Fliegende schräg 45°",
+      "weight" : 0
+    },
+    "Kabelzug hoch stehend über Kopf" : {
+      "area" : "Trizeps",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Kabelzug hoch stehend über Kopf",
+      "weight" : 10
+    },
+    "Kabelzug hoch stehend" : {
+      "area" : "Bizeps",
+      "fxf" : 5,
+      "hatfield" : 0,
+      "name" : "Kabelzug hoch stehend",
+      "weight" : 10
+    },
+    "Kabelzug unten" : {
+      "area" : "Bizeps",
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Kabelzug unten",
+      "weight" : 0
+    },
+    "Kreuzheben & Beine pro Seite" : {
+      "area" : "Beine",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Kreuzheben & Beine pro Seite",
+      "weight" : 20
+    },
+    "Kurzhantelrudern einhändig" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Kurzhantelrudern",
+      "weight" : 24
+    },
+    "Langhantelrudern vorgebeugt" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Langhantelrudern vorgebeugt",
+      "weight" : 45
+    },
+    "Latzug breit zum Nacken" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Latzug breit zum Nacken",
+      "weight" : 60
+    },
+    "Latzug breit zur Brust" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Latzug breit zur Brust",
+      "weight" : 60
+    },
+    "Latzug eng Untergriff" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Latzug eng Untergriff",
+      "weight" : 0
+    },
+    "Latzug eng zur Brust" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Latzug eng zur Brust",
+      "weight" : 65
+    },
+    "Latzugmaschine" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Latzugmaschine",
+      "weight" : 90
+    },
+    "Liegestütz" : {
+      "area" : "Brust, Trizeps",
+      "fxf" : 50,
+      "hatfield" : 0,
+      "name" : "Liegestütz",
+      "weight" : 0
+    },
+    "Plank" : {
+      "area" : "Brust",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Plank",
+      "weight" : 0
+    },
+    "Ruderzug Kabel beidhändig eng" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Ruderzug Kabel beidhändig eng",
+      "weight" : 45
+    },
+    "Ruderzugmaschine" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Ruderzugmaschine",
+      "weight" : 85
+    },
+    "Sit-Ups" : {
+      "area" : "Bauch",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Sit-Ups",
+      "weight" : 0
+    },
+    "Snatch Weightlift" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "Snatch Weightlift",
+      "weight" : 40
+    },
+    "T-Bar-Maschine" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "T-Bar-Maschine",
+      "weight" : 50
+    },
+    "T-Bar-Rudern" : {
+      "area" : "Rücken",
+      "fxf" : 0,
+      "hatfield" : 0,
+      "name" : "T-Bar-Rudern",
+      "weight" : 50
+    },
+    "Pushdown Seil beidhändig": {
+      "area": "Trizeps",
+      "free": false,
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Pushdown Seil beidhändig",
+      "weight": 35
+    },
+    "Pushdown Reverse Stange Untergriff": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Pushdown Reverse Stange Untergriff",
+      "weight": 25
+    },
+    "Frenchpress SZ": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Frenchpress SZ",
+      "weight": 25
+    },
+    "Überzüge liegend": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Überzüge liegend",
+      "weight": 26
+    },
+    "Trizepsmaschine": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Trizepsmaschine",
+      "weight": 10
+    },
+    "Frenchpress sitzend": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Frenchpress sitzend",
+      "weight": 35
+    },
+    "Kurzhantel Trizepsstrecken": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Kurzhantel Trizepsstrecken",
+      "weight": 35
+    },
+    "Trizepsstreck Kabel hoch": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Trizepsstreck Kabel hoch",
+      "weight": 25
+    },
+    "Kickbacks am Ruderzug": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Kickbacks am Ruderzug",
+      "weight": 5
+    },
+    "Trizepsstrecken Scheibe": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Trizepsstrecken Scheibe",
+      "weight": 15
+    },
+    "Pushdown einhändig": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Pushdown einhändig",
+      "weight": 15
+    },
+    "Dips Bizeps Curl Seil beidhändig": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Dips Bizeps Curl Seil beidhändig",
+      "weight": 35
+    },
+    "Preacher Curl einhändig": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Preacher Curl einhändig",
+      "weight": 16
+    },
+    "Preacher Curl SZ pro Seite": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Preacher Curl SZ pro Seite",
+      "weight": 10
+    },
+    "Preacher SZ Reverse pro Seite": {
+      "area": "Trizeps",
+      "fxf": 0,
+      "hatfield": 0,
+      "name": "Preacher SZ Reverse pro Seite",
+      "weight": 5
+    },
+    "Langhantel Curl frei": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Langhantel Curl frei",
+        "weight": 30
+    },
+    "Curls an Wand": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Curls an Wand",
+        "weight": 10
+    },
+    "Hammer Curl freihändig pro Seite": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Hammer Curl freihändig pro Seite",
+        "weight": 12
+    },
+    "Curl Kabelzug hoch": {
+        "area": "Bizeps",
+        "fxf": 5,
+        "hatfield": 0,
+        "name": "Curl Kabelzug hoch",
+        "weight": 12
+    },
+    "Konzentrationscurls": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Konzentrationscurls",
+        "weight": 14
+    },
+    "Bizepsmaschine": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Bizepsmaschine",
+        "weight": 20
+    },
+    "Curls schräg sitzend": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Curls schräg sitzend",
+        "weight": 5
+    },
+    "Unterarme Curl Obergriff einhändig": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Unterarme Curl Obergriff einhändig",
+        "weight": 9
+    },
+    "Curls Kabel einhändig": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Curls Kabel einhändig",
+        "weight": 15
+    },
+    "Curls Obergriff Langhantel": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Curls Obergriff Langhantel",
+        "weight": 15
+    },
+    "Curls Untergriff einhändig": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Curls Untergriff einhändig",
+        "weight": 14
+    },
+    "Curls Untergriff Langhantel": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Curls Untergriff Langhantel",
+        "weight": 20
+    },
+    "Curls hinter Rücken pro Seite": {
+        "area": "Bizeps",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Curls hinter Rücken pro Seite",
+        "weight": 20
+    },
+    "Beinpresse": {
+        "area": "Beine",
+        "fxf": 170,
+        "hatfield": 170,
+        "name": "Beinpresse",
+        "weight": 140
+    },
+    "Wadenheben stehend": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Wadenheben stehend",
+        "weight": 75
+    },
+    "Wadenheben sitzend": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Wadenheben sitzend",
+        "weight": 55
+    },
+    "Beinstrecker": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Beinstrecker",
+        "weight": 60
+    },
+    "Beinbeuger": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Beinbeuger",
+        "weight": 60
+    },
+    "Gesäßpresse": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Gesäßpresse",
+        "weight": 35
+    },
+    "Abduktoren": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Abduktoren",
+        "weight": 65
+    },
+    "Adduktoren": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Adduktoren",
+        "weight": 65
+    },
+    "Ausfallschritt pro Seite": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Ausfallschritt pro Seite",
+        "weight": 16
+    },
+    "Ausfallschritt setilich pro Seite": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Ausfallschritt setilich pro Seite",
+        "weight": 10
+    },
+    "Kniebeuge": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Kniebeuge",
+        "weight": 60
+    },
+    "Frontkniebeuge": {
+        "area": "Beine",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Frontkniebeuge",
+        "weight": 40
+    },
+    "Butterfly Reverse": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Butterfly Reverse",
+        "weight": 60
+    },
+    "Schulterpresse": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Schulterpresse",
+        "weight": 45
+    },
+    "Seithebemaschine": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Seithebemaschine",
+        "weight": 40
+    },
+    "Frontdrücken Multipresse": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Frontdrücken Multipresse",
+        "weight": 40
+    },
+    "Drücken Nacken Multipresse": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Frontkniebeuge",
+        "weight": 10
+    },
+    "Schulterdrücken freihändig pro Seite": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Schulterdrücken freihändig pro Seite",
+        "weight": 16
+    },
+    "Frontheben Kabelzug": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Frontheben Kabelzug",
+        "weight": 7
+    },
+    "Frontheben freihändig": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Frontheben freihändig",
+        "weight": 7
+    },
+    "Seitheben Kabelzug": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Seitheben Kabelzug",
+        "weight": 7
+    },
+    "Seitheben freihändig": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Seitheben freihändig",
+        "weight": 7
+    },
+    "Seitheben eng freihändig pro Seite": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Seitheben eng freihändig pro Seite",
+        "weight": 10
+    },
+    "Seitheben Armkreisen": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Seitheben Armkreisen",
+        "weight": 8
+    },
+    "Schulterheben Shrugs": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Schulterheben Shrugs",
+        "weight": 20
+    },
+    "Rudern stehend Langhantel SZ pro Seite": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Frontkniebeuge",
+        "weight": 15
+    },
+    "Rudern stehend Kabel": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Rudern stehend Kabel",
+        "weight": 10
+    },
+    "Innenrotation Kabel": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Innenrotation Kabel",
+        "weight": 7
+    },
+    "Außenrotation Kabel": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Außenrotation Kabel",
+        "weight": 5
+    },
+    "Seitheben Kabel unten vorgebeugt über Kreuz": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Seitheben Kabel unten vorgebeugt über Kreuz",
+        "weight": 6
+    },
+    "Woodchopper Bauch Seil": {
+        "area": "Schulter, Nacken",
+        "fxf": 0,
+        "hatfield": 0,
+        "name": "Woodchopper Bauch Seil",
+        "weight": 25
+    }   
+    
+  }
+}

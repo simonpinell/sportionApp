@@ -24,7 +24,7 @@
           {{ exercise.name }}
         </ion-card-title>
       </ion-card-header>
-      <ion-card-content *ngIf="!exercise.free">
+      <ion-card-content *ngIf="exercise.weight!==0">
         <ion-grid>
           <ion-row>
             <ion-col>
@@ -36,6 +36,9 @@
             <ion-col>
               <ion-text>5x5</ion-text>
             </ion-col>
+            <ion-col>
+              <ion-text></ion-text>
+            </ion-col>
           </ion-row>
           <ion-row>
             <ion-col>
@@ -46,6 +49,9 @@
             </ion-col>
             <ion-col>
               <ion-text>{{ exercise.fxf }} kg</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text>{{ exercise.area }}</ion-text>
             </ion-col>
           </ion-row>
         </ion-grid>
