@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { Router } from '@angular/router';
+import { DataserviceService } from 'src/app/services/dataservice.service';
 
 @Component({
   selector: 'app-tab2',
@@ -11,16 +11,52 @@ import { Router } from '@angular/router';
 export class Tab2Page {
 
   exercisesObservable: Observable<any[]>;
-  freeExercises: false;
+  queryText = "";
+  showOverlay: boolean;
+  newExercise = {
+    name: "",
+    weight: "",
+    fxf: "",
+    hatfield: "",
+    area: "",
+  };
 
-  constructor(public appRouter: Router, private db: AngularFireDatabase) { }
+  constructor(public appRouter: Router, private dataService: DataserviceService) { }
 
   ngOnInit() {
-    this.exercisesObservable = this.getExercises('/exercises');
+    this.exercisesObservable = this.dataService.getExercises();
+    this.showOverlay = false;
+    
   }
 
-  getExercises(listPath): Observable<any[]> {
-    return this.db.list(listPath).valueChanges();
-    //this.exerciseService.getexercises().subscribe(exercises => this.exercises = exercises);
+  addExercise() {
+    this.dataService.createExercise(this.newExercise);    
+    this.newExercise.name = "";
+    this.newExercise.area = "";
+    this.newExercise.weight = "";
+    this.newExercise.fxf = "";
+    this.newExercise.hatfield = "";
   }
+
+  openAddOverlay() {
+    this.showOverlay = !this.showOverlay;
+  }
+
+  
+
+
+  updateView() {
+    this.dataService.searchExercises(this.queryText);
+  }
+  /*
+    // Close any open sliding items when the schedule updates
+    if (this.scheduleList) {
+      this.scheduleList.closeSlidingItems();
+    }
+
+    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).subscribe((data: any) => {
+      this.shownSessions = data.shownSessions;
+      this.groups = data.groups;
+    });
+  }*/
 }

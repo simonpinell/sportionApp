@@ -4,12 +4,15 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
 
+    <ion-searchbar [(ngModel)]="queryText" (ionChange)="updateView()" placeholder="Search"></ion-searchbar>
     <ion-buttons slot="end">
       <ion-button (click)="presentFilter()">
         <ion-icon slot="icon-only" name="options"></ion-icon>
       </ion-button>
+      <ion-button (click)="openAddOverlay()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
     </ion-buttons>
-    <ion-searchbar [(ngModel)]="queryText" (ionChange)="updateSchedule()" placeholder="Search"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -17,8 +20,28 @@
   <div class="bg bg1 bg-lgrey"></div>
   <div class="bg bg2 bg-mgrey"></div>
   <div class="bg bg3 bg-dgrey"></div>
+
+  <ion-card color="secondary" [hidden]="!showOverlay">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="newExercise.name" placeholder="Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="newExercise.weight" placeholder="Gewicht"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="newExercise.fxf" placeholder="5x5"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="newExercise.hatfield" placeholder="Hatfield"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="newExercise.area" placeholder="Bereich"></ion-input>
+    </ion-item>
+      <ion-button margin (click)="addExercise()">Hinzufügen</ion-button>   
+  </ion-card>
+
   <ion-list no-lines>
-    <ion-card *ngFor="let exercise of exercisesObservable | async" routerLink="/detail/{{exercise.id}}">
+    <ion-card *ngFor="let exercise of exercisesObservable | async" routerLink="/detail/{{exercise.name}}">
       <ion-card-header color="primary">
         <ion-card-title>
           {{ exercise.name }}
