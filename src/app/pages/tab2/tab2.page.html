@@ -2,16 +2,18 @@
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-
-    <ion-searchbar [(ngModel)]="queryText" (ionChange)="updateView()" placeholder="Search"></ion-searchbar>
-    <ion-buttons slot="end">
-      <ion-button (click)="presentFilter()">
-        <ion-icon slot="icon-only" name="options"></ion-icon>
-      </ion-button>
       <ion-button (click)="openAddOverlay()">
         <ion-icon slot="icon-only" name="add"></ion-icon>
       </ion-button>
+    </ion-buttons>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()" placeholder="Search"></ion-searchbar>
+    <ion-buttons slot="end">
+      <!--ion-button (click)="presentFilter()">
+        <ion-icon slot="icon-only" name="options"></ion-icon>
+      </ion-button>-->
+      <ion-button (click)="toggleAllDetails()">
+        <ion-icon slot="icon-only" name="list"></ion-icon>
+      </ion-button>     
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -21,7 +23,7 @@
   <div class="bg bg2 bg-mgrey"></div>
   <div class="bg bg3 bg-dgrey"></div>
 
-  <ion-card color="secondary" [hidden]="!showOverlay">
+  <ion-card color="primary" [hidden]="!showOverlay">
     <ion-item>
       <ion-input type="text" [(ngModel)]="newExercise.name" placeholder="Name"></ion-input>
     </ion-item>
@@ -37,17 +39,17 @@
     <ion-item>
       <ion-input type="text" [(ngModel)]="newExercise.area" placeholder="Bereich"></ion-input>
     </ion-item>
-      <ion-button margin (click)="addExercise()">Hinzufügen</ion-button>   
+    <ion-button color="tertiary" margin (click)="addExercise()">Hinzufügen</ion-button>
   </ion-card>
 
   <ion-list no-lines>
-    <ion-card *ngFor="let exercise of exercisesObservable | async" routerLink="/detail/{{exercise.name}}">
-      <ion-card-header color="primary">
+    <ion-card *ngFor="let exercise of exercisesObservable | async">
+      <ion-card-header color="primary" routerLink="/details/{{exercise.name}}">
         <ion-card-title>
           {{ exercise.name }}
         </ion-card-title>
       </ion-card-header>
-      <ion-card-content *ngIf="exercise.weight!==0">
+      <ion-card-content *ngIf="exercise.weight!==0" [hidden]="!showAllDetails">
         <ion-grid>
           <ion-row>
             <ion-col>
@@ -58,9 +60,6 @@
             </ion-col>
             <ion-col>
               <ion-text>5x5</ion-text>
-            </ion-col>
-            <ion-col>
-              <ion-text></ion-text>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -73,45 +72,16 @@
             <ion-col>
               <ion-text>{{ exercise.fxf }} kg</ion-text>
             </ion-col>
-            <ion-col>
-              <ion-text>{{ exercise.area }}</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-col color="primary">
+              <ion-chip color="secondary">
+                <ion-text>{{ exercise.area }}</ion-text>
+              </ion-chip>
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-card-content>
     </ion-card>
   </ion-list>
-
-  <ion-list #scheduleList [hidden]="shownSessions === 0">
-    <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
-      <ion-item-divider sticky>
-        <ion-label>
-          {{group.time}}
-        </ion-label>
-      </ion-item-divider>
-
-      <ion-item-sliding *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.tracks[0] | lowercase"
-        [hidden]="session.hide">
-        <ion-item routerLink="/app/tabs/schedule/session/{{session.id}}">
-          <ion-label>
-            <h3>{{session.name}}</h3>
-            <p>
-              {{session.timeStart}} &mdash; {{session.timeEnd}}: {{session.location}}
-            </p>
-          </ion-label>
-        </ion-item>
-        <ion-item-options>
-          <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
-            <ion-icon name="heart-empty" size="large" class="icon-heart-empty"></ion-icon>
-          </ion-item-option>
-          <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')"
-            *ngIf="segment === 'favorites'">
-            <ion-icon name="heart" color="danger" size="large" class="icon-heart"></ion-icon>
-          </ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding>
-    </ion-item-group>
-  </ion-list>
-
-
 </ion-content>

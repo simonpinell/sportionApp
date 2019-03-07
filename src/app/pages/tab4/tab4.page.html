@@ -8,6 +8,23 @@
   <div class="bg bg1 bg-lgrey"></div>
   <div class="bg bg2 bg-mgrey"></div>
   <div class="bg bg3 bg-dgrey"></div>
+  
+ <ion-list>
+    <ion-item>
+      <ion-label>Drinking</ion-label>
+      <ion-toggle [(ngModel)]="drinking" color="primary"></ion-toggle>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Motivation</ion-label>
+      <ion-toggle [(ngModel)]="motivation" color="primary"></ion-toggle>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Moving</ion-label>
+      <ion-toggle [(ngModel)]="moving" color="primary"></ion-toggle>
+    </ion-item>
+  </ion-list>
   <ion-list>
     <ion-item (click)="updatePicture()">Update Picture</ion-item>
     <ion-item (click)="changeUsername()">Change Username</ion-item>

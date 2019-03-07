@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ exercisesObservable.name }}</ion-title>
+    <ion-icon slot="start" name="arrow-back" (click)="goBack()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg bg1 bg-lgrey"></div>
+  <div class="bg bg2 bg-mgrey"></div>
+  <div class="bg bg3 bg-dgrey"></div>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>
+        </ion-card-subtitle>
+        <ion-card-title>Weights</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row class="flex-btw">
+            <ion-col>
+              <ion-text>Workout Weights</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text>{{ exercisesObservable.weight }} kg</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row class="flex-btw">
+            <ion-col>
+              <ion-text>Hatfield</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text>{{ exercisesObservable.hatfield }}</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row class="flex-btw">
+            <ion-col>
+              <ion-text>5x5</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text>{{ exercisesObservable.fiveXfive }} kg</ion-text>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>    
+
+</ion-content>

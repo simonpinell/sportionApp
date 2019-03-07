@@ -7,15 +7,22 @@ import { AngularFireDatabase } from '@angular/fire/database';
 })
 export class DataserviceService {
 
-  constructor(private db: AngularFireDatabase) { }
+  exerciseItems: any;
+  jsonData: any;
+  exerciseFavorite = false;
+
+  constructor(private db: AngularFireDatabase) {
+    }
 
   getExercises(): Observable<any[]> {
     return this.db.list('/exercises').valueChanges();
-    //this.exerciseService.getexercises().subscribe(exercises => this.exercises = exercises);
+  }
+
+  getExercise(name): Observable<any[]> {
+    return this.db.list('/exercises/' + name).valueChanges();
   }
 
   createExercise(exerciseObject) {
-
     let newExercise = {
       area: exerciseObject.area,
       fxf: exerciseObject.fxf,
@@ -23,7 +30,27 @@ export class DataserviceService {
       name: exerciseObject.name,
       weight: exerciseObject.weight
     }
-  
-  this.db.list('/exercises/').push(newExercise);
+
+    this.db.list('/exercises/').push(newExercise);
   }
+
+  //does not work:
+  updateWorkout(exercise){
+    console.log("hey there");
+    console.log(exercise);
+    
+    this.db.list('/workouts/' + exercise).set(
+      name, "NANANANA"
+    
+    );
+    console.log("error");
+    
+  }
+//
+
+  getWorkouts(): Observable<any[]> {
+    return this.db.list('/workouts').valueChanges();
+  }
+
+
 }

@@ -1,8 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Workouts
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-button (click)="openAddOverlay()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar [(ngModel)]="queryText" (ionChange)="updateView()" placeholder="Search"></ion-searchbar>
+    <ion-buttons slot="end">
+      <!--ion-button (click)="presentFilter()">
+        <ion-icon slot="icon-only" name="options"></ion-icon>
+      </ion-button>-->
+      <ion-button (click)="toggleAllDetails()">
+        <ion-icon slot="icon-only" name="list"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -10,5 +22,72 @@
   <div class="bg bg1 bg-lgrey"></div>
   <div class="bg bg2 bg-mgrey"></div>
   <div class="bg bg3 bg-dgrey"></div>
-  
+
+  <ion-list no-lines>
+    <ion-card *ngFor="let workout of workoutsObservable | async">
+      <ion-card-header color="primary" (click)="toggleAllDetails()">
+        <ion-card-title class="flex-btw">
+          {{ workout.name }}
+          <ion-label color="secondary">{{ workout.points }}</ion-label>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content [hidden]="!showAllDetails">
+        <ion-grid>
+          <ion-row class="flex-btw">
+            <ion-col *ngIf="workout.iterate!=0">
+              <ion-text color="secondary">{{ workout.iterate }} Runden</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-buttons class="fl-right"> 
+                <ion-button (click)="setFavorite()">
+                  <ion-icon *ngIf="exerciseFavorite" color="secondary" slot="icon-only" name="heart"></ion-icon>
+                  <ion-icon *ngIf="!exerciseFavorite" color="secondary" slot="icon-only" name="heart-empty"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </ion-col>
+          </ion-row>
+          <ion-row class="flex-btw">
+            <ion-col>
+              <ion-text>{{ workout.exercise1 }}</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text>{{ workout.rep1 }}x</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row class="flex-btw" *ngIf="workout.exercise2">
+            <ion-col>
+              <ion-text>{{ workout.exercise2 }}</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text>{{ workout.rep2 }}x</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row class="flex-btw" *ngIf="workout.exercise3">
+            <ion-col>
+              <ion-text>{{ workout.exercise3 }}</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text>{{ workout.rep3 }}x</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row class="flex-btw" *ngIf="workout.exercise4">
+            <ion-col>
+              <ion-text>{{ workout.exercise4 }}</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text>{{ workout.rep4 }}x</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row class="flex-btw" *ngIf="workout.exercise5">
+            <ion-col>
+              <ion-text>{{ workout.exercise5 }}</ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text>{{ workout.rep5 }}x</ion-text>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>

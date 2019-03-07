@@ -11,7 +11,8 @@ import { DataserviceService } from 'src/app/services/dataservice.service';
 export class Tab2Page {
 
   exercisesObservable: Observable<any[]>;
-  queryText = "";
+  searchTerm: any = "";
+  jsonData: any;
   showOverlay: boolean;
   newExercise = {
     name: "",
@@ -20,13 +21,13 @@ export class Tab2Page {
     hatfield: "",
     area: "",
   };
+  showAllDetails = false;
 
-  constructor(public appRouter: Router, private dataService: DataserviceService) { }
+  constructor(public appRouter: Router, public dataService: DataserviceService) { }
 
   ngOnInit() {
     this.exercisesObservable = this.dataService.getExercises();
     this.showOverlay = false;
-    
   }
 
   addExercise() {
@@ -42,13 +43,14 @@ export class Tab2Page {
     this.showOverlay = !this.showOverlay;
   }
 
-  
-
-
-  updateView() {
-    this.dataService.searchExercises(this.queryText);
+  toggleAllDetails() {
+    this.showAllDetails = !this.showAllDetails;
   }
-  /*
+
+ 
+
+/*  updateView() {
+    
     // Close any open sliding items when the schedule updates
     if (this.scheduleList) {
       this.scheduleList.closeSlidingItems();
